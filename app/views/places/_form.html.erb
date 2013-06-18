@@ -1,0 +1,61 @@
+<%= form_for (@place) do |f| %>
+  <% if @place.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@place.errors.count, "error") %> prohibited this place from being saved:</h2>
+
+      <ul>
+      <% @place.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, placeholder: "Name of the Place" %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, placeholder: "Describe it" %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address, placeholder: "e.g: 100 Street Name, City, Zip" %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone, placeholder: "+99 100 10010000" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :city_id %><br />
+    <%= f.collection_select :city_id, City.all, :id, :name %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :category_id %><br />
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cuisine_id %><br />
+    <%= f.collection_select :cuisine_id, Cuisine.all, :id, :name %>
+  </div>
+  
+  <%= f.fields_for :review do |review_form| %>
+    <div class="field">
+      <%= review_form.label :score, "Rate" %><br />
+      <%= review_form.number_field :score %>
+    </div>
+    <div class="field">
+      <%= review_form.label :comment, "Review" %><br />
+      <%= review_form.text_area :comment %>
+    </div>
+  <% end %>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

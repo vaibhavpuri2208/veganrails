@@ -1,0 +1,31 @@
+<h1>Listing hackathons</h1>
+
+<table>
+  <tr>
+    <th>City</th>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Where</th>
+    <th>Info</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hackathons.each do |hackathon| %>
+  <tr>
+    <td><%= hackathon.city %></td>
+    <td><%= hackathon.name %></td>
+    <td><%= hackathon.date %></td>
+    <td><%= hackathon.where %></td>
+    <td><%= hackathon.info %></td>
+    <td><%= link_to 'Show', hackathon %></td>
+    <td><%= link_to 'Edit', edit_hackathon_path(hackathon) %></td>
+    <td><%= link_to 'Destroy', hackathon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hackathon', new_hackathon_path %>
