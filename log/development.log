@@ -14031,3 +14031,187 @@ Served asset /places.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-18 15:09:31 +0200
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/reviews/new" for 127.0.0.1 at 2013-06-18 15:41:10 +0200
+Connecting to database specified by database.yml
+Processing by ReviewsController#new as HTML
+  Rendered reviews/_form.html.erb (6.5ms)
+  Rendered reviews/new.html.erb within layouts/application (12.5ms)
+Compiled application.css  (2ms)  (pid 22985)
+Completed 200 OK in 114ms (Views: 87.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /application.css - 200 OK (15ms)
+
+
+Started GET "/assets/cuisines.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /cuisines.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /categories.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /hackathons.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/cities.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /cities.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pictures.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /pictures.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /places.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /reviews.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/cities.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /cities.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /categories.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/cuisines.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /cuisines.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /hackathons.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pictures.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /pictures.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /reviews.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /places.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:11 +0200
+Served asset /application.js - 304 Not Modified (30ms)
+
+
+Started GET "/reviews/new" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Processing by ReviewsController#new as HTML
+  Rendered reviews/_form.html.erb (2.6ms)
+  Rendered reviews/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cities.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /cities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cuisines.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /cuisines.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /hackathons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pictures.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /pictures.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /places.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /reviews.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cities.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /cities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cuisines.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /cuisines.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pictures.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /pictures.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hackathons.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /hackathons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /reviews.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-06-18 15:41:12 +0200
+Served asset /users.js - 304 Not Modified (0ms)
