@@ -18,9 +18,14 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+ # gem 'zurb-foundation', '~> 4.0.0'
+  gem 'carrierwave'
+gem "rmagick","~> 2.13.2"
+
 end
 
 gem 'jquery-rails'
+
 
 gem 'pry'
 

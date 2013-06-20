@@ -1,6 +1,5 @@
 class CuisinesController < ApplicationController
-  # GET /cuisines
-  # GET /cuisines.json
+ 
   def index
     @cuisines = Cuisine.all
 
@@ -10,8 +9,7 @@ class CuisinesController < ApplicationController
     end
   end
 
-  # GET /cuisines/1
-  # GET /cuisines/1.json
+ 
   def show
     @cuisine = Cuisine.find(params[:id])
 
@@ -21,8 +19,7 @@ class CuisinesController < ApplicationController
     end
   end
 
-  # GET /cuisines/new
-  # GET /cuisines/new.json
+ 
   def new
     @cuisine = Cuisine.new
 
@@ -32,13 +29,12 @@ class CuisinesController < ApplicationController
     end
   end
 
-  # GET /cuisines/1/edit
+ 
   def edit
     @cuisine = Cuisine.find(params[:id])
   end
 
-  # POST /cuisines
-  # POST /cuisines.json
+ 
   def create
     @cuisine = Cuisine.new(params[:cuisine])
 
@@ -53,8 +49,7 @@ class CuisinesController < ApplicationController
     end
   end
 
-  # PUT /cuisines/1
-  # PUT /cuisines/1.json
+ 
   def update
     @cuisine = Cuisine.find(params[:id])
 
@@ -69,8 +64,7 @@ class CuisinesController < ApplicationController
     end
   end
 
-  # DELETE /cuisines/1
-  # DELETE /cuisines/1.json
+ 
   def destroy
     @cuisine = Cuisine.find(params[:id])
     @cuisine.destroy

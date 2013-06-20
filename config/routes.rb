@@ -18,7 +18,7 @@ HackJsonSupport::Application.routes.draw do
   
   resources :sessions
 
-  root :to => 'static#home'
+  root :to => 'static#start'
   
   get '/login', :controller => 'static', :action => 'login', as: 'login' 
 

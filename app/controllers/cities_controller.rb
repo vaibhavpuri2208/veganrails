@@ -1,6 +1,5 @@
 class CitiesController < ApplicationController
-  # GET /cities
-  # GET /cities.json
+ 
   def index
     @cities = City.all
 
@@ -10,8 +9,7 @@ class CitiesController < ApplicationController
     end
   end
 
-  # GET /cities/1
-  # GET /cities/1.json
+ 
   def show
     @city = City.find(params[:id])
 
@@ -21,8 +19,7 @@ class CitiesController < ApplicationController
     end
   end
 
-  # GET /cities/new
-  # GET /cities/new.json
+ 
   def new
     @city = City.new
 
@@ -32,13 +29,12 @@ class CitiesController < ApplicationController
     end
   end
 
-  # GET /cities/1/edit
+ 
   def edit
     @city = City.find(params[:id])
   end
 
-  # POST /cities
-  # POST /cities.json
+ 
   def create
     @city = City.new(params[:city])
 
@@ -53,8 +49,7 @@ class CitiesController < ApplicationController
     end
   end
 
-  # PUT /cities/1
-  # PUT /cities/1.json
+
   def update
     @city = City.find(params[:id])
 
@@ -69,8 +64,7 @@ class CitiesController < ApplicationController
     end
   end
 
-  # DELETE /cities/1
-  # DELETE /cities/1.json
+
   def destroy
     @city = City.find(params[:id])
     @city.destroy

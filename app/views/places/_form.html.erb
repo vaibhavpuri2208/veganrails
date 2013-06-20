@@ -1,4 +1,4 @@
-<%= form_for (@place) do |f| %>
+<%= form_for @place, :html => {:multipart => true} do |f| %>
   <% if @place.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@place.errors.count, "error") %> prohibited this place from being saved:</h2>
@@ -43,7 +43,20 @@
     <%= f.label :cuisine_id %><br />
     <%= f.collection_select :cuisine_id, Cuisine.all, :id, :name %>
   </div>
-  
+
+  <div>
+    <%= f.label :picture %><br />
+    <%= f.file_field :picture %>
+  </div>
+
+  <p>
+    <%= f.label :remote_picture_url, "or image URL" %>
+    <%= f.text_field :remote_picture_url %>
+  </p>
+
+
+<% if false %>
+
   <%= f.fields_for :review do |review_form| %>
     <div class="field">
       <%= review_form.label :score, "Rate" %><br />
@@ -54,7 +67,7 @@
       <%= review_form.text_area :comment %>
     </div>
   <% end %>
-  
+<%end %>  
   <div class="actions">
     <%= f.submit %>
   </div>
