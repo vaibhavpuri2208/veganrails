@@ -1,9 +1,9 @@
 
 <div class="row">
-<form>
-  <fieldset>
-    <legend>Add a new Vegan Place</legend>
       <%= form_for @place, :html => {:multipart => true} do |f| %>
+        <fieldset>
+          <legend>Add a new Vegan Place</legend>
+ 
         <% if @place.errors.any? %>
           <div id="error_explanation">
             <h2><%= pluralize(@place.errors.count, "error") %> prohibited this place from being saved:</h2>
@@ -118,5 +118,4 @@
 <% end %>
 
 </fieldset>
-</form>
 </div>
