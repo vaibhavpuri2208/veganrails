@@ -10,5 +10,11 @@
  *
  *= require_self
  *= require_tree .
+
+ *= require foundation 
+ *= require custom 
+
  */
+
+ 
 body { background: #f9f9f9; }

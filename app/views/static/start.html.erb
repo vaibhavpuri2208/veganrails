@@ -1,4 +1,22 @@
-<h1> You are in the Start Page</h1>
+<div class="row">
+  <div class>
+  <center>
+    <h2 >Welcome to the Vegan App</h2>
+  </center>
+</div>
 
-<%=link_to 'Add a new Place', '/places/new'%>
-<%=link_to 'Find a place', '/places/find'%>
+
+<div class="row">
+  
+
+  <div class=" large-6  columns">
+    <%=link_to 'Add a new Place', '/places/new', :class=>'large button'%>
+  </div>
+
+
+
+
+  <div class=" offset-1 large-5  columns">
+    <%=link_to 'Find a place', search_url, :class=>'large button success'%>
+  </div>  
+</div>

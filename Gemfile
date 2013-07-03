@@ -18,14 +18,15 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
- # gem 'zurb-foundation', '~> 4.0.0'
   gem 'carrierwave'
-gem "rmagick","~> 2.13.2"
-
+  gem "rmagick","~> 2.13.2"
+  gem 'compass-rails' # you need this or you get an err
+  gem 'zurb-foundation', '~> 4.0.0'
 end
 
 gem 'jquery-rails'
 
+#gem 'rd_searchlogic', :require => 'searchlogic', :git => 'git://github.com/railsdog/searchlogic.git'
 
 gem 'pry'
 

@@ -1,74 +1,122 @@
-<%= form_for @place, :html => {:multipart => true} do |f| %>
-  <% if @place.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@place.errors.count, "error") %> prohibited this place from being saved:</h2>
 
-      <ul>
-      <% @place.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+<div class="row">
+<form>
+  <fieldset>
+    <legend>Add a new Vegan Place</legend>
+      <%= form_for @place, :html => {:multipart => true} do |f| %>
+        <% if @place.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@place.errors.count, "error") %> prohibited this place from being saved:</h2>
+
+          <ul>
+            <% @place.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+         </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, placeholder: "Name of the Place" %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description, placeholder: "Describe it" %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address, placeholder: "e.g: 100 Street Name, City, Zip" %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone, placeholder: "+99 100 10010000" %>
-  </div>
 
 
-  <div class="field">
-    <%= f.label :city_id %><br />
-    <%= f.collection_select :city_id, City.all, :id, :name %>
-  </div>
+      <div class="row">
+        <div class="large-4 columns">
+
+          <%= f.label :name %><br />
+          <%= f.text_field :name, placeholder: "Name of the Place" %>
+      
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-4 columns">
+          <%= f.label :description %><br />
+          <%= f.text_area :description, placeholder: "Describe it" %>
+        </div>
+      </div>
   
-  <div class="field">
-    <%= f.label :category_id %><br />
-    <%= f.collection_select :category_id, Category.all, :id, :name %>
-  </div>
+      <div class="row">
+        <div class="large-4 columns">
+          <%= f.label :address %><br />
+          <%= f.text_field :address, placeholder: "e.g: 100 Street Name, City, Zip" %>
+        </div>
+     </div>
+  
 
-  <div class="field">
-    <%= f.label :cuisine_id %><br />
-    <%= f.collection_select :cuisine_id, Cuisine.all, :id, :name %>
-  </div>
+      <div class="row">
+        <div class="large-4 columns">
+          <%= f.label :phone %><br />
+          <%= f.text_field :phone, placeholder: "+99 100 10010000" %>
+        </div>
+      </div>
 
-  <div>
-    <%= f.label :picture %><br />
-    <%= f.file_field :picture %>
-  </div>
+      <div class="row">
+        <div class="large-4 columns">
+          <%= f.label :city_id %><br />
+          <%= f.collection_select :city_id, City.all, :id, :name, {},{:class=>'button secondary my_light_button'} %>
+        </div>
+      </div>  
+  
+      <div class="row">
+        <div class="large-4 columns">
+          <%= f.label :category_id %><br />
+             <%= f.collection_select :category_id, Category.all, :id, :name, {},{:class=>'button secondary'} %>
+        </div>
+      </div>  
 
-  <p>
-    <%= f.label :remote_picture_url, "or image URL" %>
-    <%= f.text_field :remote_picture_url %>
-  </p>
+      <div class="row">
+        <div class="large-4 columns">
+          <%= f.label :cuisine_id %><br />
+          <%= f.collection_select :cuisine_id, Cuisine.all, :id, :name, {},{:class=>'button secondary '} %>
+        </div>
+      </div>
+      
 
-
-<% if false %>
-
-  <%= f.fields_for :review do |review_form| %>
-    <div class="field">
-      <%= review_form.label :score, "Rate" %><br />
-      <%= review_form.number_field :score %>
+      <div class="row">
+        <div class="large-1 columns">
+          <%= f.label :picture %><br />
+        </div>
+        <div class="large-3 columns">
+          <%= f.file_field :picture %>
+        </div>
+      
+        <div class="large-2 columns">
+          <%= f.label :remote_picture_url, "or Image URL" %>
+        </div>
+        <div class="large-6 columns">
+          <%= f.text_field :remote_picture_url %>
+        </div>
     </div>
-    <div class="field">
-      <%= review_form.label :comment, "Review" %><br />
-      <%= review_form.text_area :comment %>
-    </div>
-  <% end %>
-<%end %>  
-  <div class="actions">
-    <%= f.submit %>
+
+  <% if false %>
+    <%= f.fields_for :review do |review_form| %>
+      <div class="row">
+        <div class="large-4 columns">
+          <%= review_form.label :score, "Rate" %><br />
+          <%= review_form.number_field :score %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-4 columns">
+          <%= review_form.label :comment, "Review" %><br />
+          <%= review_form.text_area :comment %>
+         </div>
+      </div>
+
+    <% end %>
+  <%end %>  
+
+  <div class="row">
+     <div class="large-4 columns ">
+        <%= f.submit(class:'button prefix')%>
+      </div>
+    
+     <div class="large-4 columns "> 
+      <%= link_to "Nah, I'll add it later", root_url, {class:'button prefix success'}  %>
+     </div>
+
   </div>
 <% end %>
+
+</fieldset>
+</form>
+</div>
