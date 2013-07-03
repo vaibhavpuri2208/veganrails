@@ -24,6 +24,8 @@ HackJsonSupport::Application.routes.draw do
 
   get '/search/new', :controller=>'search', :action =>'new', as: 'search'
 
+
+  get '/search/find', :controller=>'search', :action=>'find'
   # Delete after ready
   resources :hackathons
 end
