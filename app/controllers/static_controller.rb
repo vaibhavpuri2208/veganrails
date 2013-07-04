@@ -8,4 +8,7 @@ class StaticController < ApplicationController
   end
 
 
+  def mainmenu
+  end
+
 end

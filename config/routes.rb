@@ -18,8 +18,10 @@ HackJsonSupport::Application.routes.draw do
   
   resources :sessions
 
-  root :to => 'static#start'
+  root :to => 'static#home'
   
+  get '/mainmenu', :controller => 'static', :action=>'mainmenu', as: 'mainmenu'
+
   get '/login', :controller => 'static', :action => 'login', as: 'login' 
 
   get '/search/new', :controller=>'search', :action =>'new', as: 'search'

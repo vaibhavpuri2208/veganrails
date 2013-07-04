@@ -34,10 +34,13 @@ class PlacesController < ApplicationController
 
   def create
     @place = Place.new(params[:place])
-
+    #String processing the text number into a pure number
+    input_num = @place.phone
+    @place.phone = input_num.gsub(/[^0-9]/, '')
+    
     respond_to do |format|
       if @place.save
-        format.html { redirect_to @place, notice: 'Place was successfully created.' }
+        format.html { redirect_to mainmenu_url, notice: 'This location was successfully added to our Vegan database!' }
         format.json { render json: @place, status: :created, location: @place }
       else
         format.html { render action: "new" }
@@ -51,7 +54,7 @@ class PlacesController < ApplicationController
 
     respond_to do |format|
       if @place.update_attributes(params[:place])
-        format.html { redirect_to @place, notice: 'Place was successfully updated.' }
+        format.html { redirect_to mainmenu_url, notice: 'OK. We have updated this location' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

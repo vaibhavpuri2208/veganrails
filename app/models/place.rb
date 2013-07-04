@@ -6,7 +6,7 @@ class Place < ActiveRecord::Base
   belongs_to :city
   belongs_to :category
   belongs_to :cuisine
-
-    mount_uploader :picture, PictureUploader
-
+  mount_uploader :picture, PictureUploader
+  validates :name, :address, :description, :phone, presence:true
+  
 end
