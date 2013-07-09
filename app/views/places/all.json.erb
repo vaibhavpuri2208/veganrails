@@ -1,0 +1,29 @@
+
+
+  {
+
+  "cafe":[
+   <% @cafes.each do |var| %>
+    { 'name':<%=var.name.to_s %>,'description':<%=var.description %>,'address':<%=var.address %>,'phone':<%=var.phone %>
+    },
+
+   <%end%> 
+   ],
+
+
+"restaurants":[
+   <% @restaurants.each do |var| %>
+    { 'name':<%=var.name.to_s %>,'description':<%=var.description %>,'address':<%=var.address %>,'phone':<%=var.phone %>
+    },
+   <%end%> 
+   ],
+
+
+   "groceries":[
+   <% @groceries.each do |var| %>
+        { 'name':<%=var.name.to_s %>,'description':<%=var.description %>,'address':<%=var.address %>,'phone':<%=var.phone %>
+    },
+   <%end%> 
+   ]
+
+  }

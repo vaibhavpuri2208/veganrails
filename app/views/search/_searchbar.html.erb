@@ -1,0 +1,33 @@
+<div class="row"> 
+  
+  <%= form_tag '/search/find', method:'get' do%>
+    <fieldset>
+      <legend style="font-family: 'Trocchi', serif;color:rgb(170, 59, 59)">Search</legend>
+        
+      <div class="row">
+        <div class="large-5 columns">
+          <%= text_field :place,:name, {placeholder:'Search by name, cuisine or city (e.g. Cafe Berlin)'} %>
+        </div>  
+
+        <div class="large-3 columns" style="float:left;padding-right:0px">
+          <%= submit_tag("Search", class: "button") %>
+          <%= link_to "Back", mainmenu_url, {class:' ', style:"font-weight:200;font-size:16px;margin-left:20px;"}  %>
+        </div>  
+       
+        <div class="large-2  columns" style="float:left">
+         
+        </div>  
+      </div>  
+
+
+
+
+
+
+
+
+
+
+    </fieldset>
+  <%end%>
+</div>

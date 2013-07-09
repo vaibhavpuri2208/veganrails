@@ -1,0 +1,49 @@
+<div class="row">
+
+
+
+  <%if @places.empty? %>
+    <h5>No information was found</h5>
+
+
+  <%else%>
+    
+    <div class="large-12 columns">
+    <h6>Search Results</h6>
+      <table>
+          <thead>
+             <tr>
+
+              <th>Name</th>
+              <th>Cuisine</th>
+              <th>Description</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>Type</th>
+              <th>Phone</th>
+             </tr> 
+          </thead>  
+
+          <tbody>
+            <% @places.each do |place|%>
+
+            <tr style="font-size:18px;">
+              
+              <td><%=place.name%></td>
+              <td><%=place.cuisine.name%></td>
+              <td><%=place.description%></td>
+              <td><%=place.address%></td>
+              <td><%=place.city.name%></td>  
+              <td><%=place.category.name%></td>
+              <td>+ <%=place.phone.to_s.scan(/(.{2}|.+)/).join(' ')%></td>
+
+
+            </tr>
+            <%end%>
+          </tbody>
+        </table>
+      </div>
+    </div>  
+  <%end%>
+
+
