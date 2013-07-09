@@ -3,18 +3,27 @@ class PlacesController < ApplicationController
   def index
     @places = Place.all
 
+    @cafes = Place.where(:category_id=>1)
+    @restaurants = Place.where(:category_id=>2)
+    @groceries = Place.where(:category_id=>3)
+
+
+
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @places }
+      format.json {render :file => "places/all.json.erb", :content_type => 'application/json'}
     end
   end
 
   def show
     @place = Place.find(params[:id])
+   
+
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @place }
+      #format.json { render 'places.json.erb' }
+
     end
   end
 
@@ -36,8 +45,8 @@ class PlacesController < ApplicationController
     @place = Place.new(params[:place])
     #String processing the text number into a pure number
     input_num = @place.phone
-    @place.phone = input_num.gsub(/[^0-9]/, '')
-    
+    @place.phone = input_num.to_s.gsub(/[^0-9]/, '') if input_num
+   # flash[:notice] = "Added your Vegan Place successfully"
     respond_to do |format|
       if @place.save
         format.html { redirect_to mainmenu_url, notice: 'This location was successfully added to our Vegan database!' }

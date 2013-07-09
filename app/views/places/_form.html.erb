@@ -8,7 +8,7 @@
  
         <% if @place.errors.any? %>
           <div id="error_explanation">
-            <h2><%= pluralize(@place.errors.count, "error") %> prohibited this place from being saved:</h2>
+            <h5><%= pluralize(@place.errors.count, "error") %> prohibited this place from being saved:</h5>
 
           <ul>
             <% @place.errors.full_messages.each do |msg| %>
@@ -112,7 +112,7 @@
     </div>
     <div class="row">
      <div class="large-3 columns "> 
-        <%= link_to "Nah, Will do it later!", root_url, {class:'button prefix secondary', style:"font-weight:400"}  %>
+        <%= link_to "Nah, Will do it later!", mainmenu_url, {class:'button prefix secondary', style:"font-weight:400"}  %>
 
      </div>
 
